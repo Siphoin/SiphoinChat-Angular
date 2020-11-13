@@ -1,0 +1,19 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="/assets/img/img_81779.png" id="icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form>
+        <input  type="text" #inputName id="login" class="fadeIn second" name="login" placeholder="Name">
+        <input  type="text" #inputRoom id="text" class="fadeIn third" name="login" placeholder="Room Name">
+
+        <input type="submit" class="fadeIn fourth" value="Login" (click)="onSubmit($event, inputName.value, inputRoom.value)">
+      </form>
+
+    </div>
+  </div>

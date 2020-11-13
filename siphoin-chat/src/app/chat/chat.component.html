@@ -1,0 +1,23 @@
+<h3>Users:</h3>
+
+  <app-user-item *ngFor="let item of users" [user]='item'>
+
+  </app-user-item>
+<div class="container content">
+  <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="card">
+          <div class="card-header">Chat</div>
+          <div class="card-body height3">
+            <ul class="chat-list">
+            <app-chat-message *ngFor="let item of messages" [message]='item'>
+
+            </app-chat-message>
+            </ul>
+          </div>
+        </div>
+      </div>
+     <div class="on-message">
+      <input #messageInput type="text" class="form-control" aria-label="Default">
+     </div>
+           <button type="button" class="btn btn-dark" (click)='sendMessage(messageInput, messageInput.value)'>Send</button>
